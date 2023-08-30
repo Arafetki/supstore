@@ -1,9 +1,16 @@
-
+import { Routes,Route } from "react-router";
+import Home from "./routes/home/home.component";
+import Navbar from "./routes/navigation/nav.component";
+import Login from "./routes/login/login.component";
 function App() {
+
   return (
-    <div className="App">
-      <h1>HELLO SUPSTORE FROM DOCKER CONTAINER</h1>
-    </div>
+    <Routes>
+      <Route path="/" element={<Navbar/>}>
+        <Route index element={<Home/>}/>
+        <Route path="/login" element={<Login/>}/>
+      </Route>
+    </Routes>
   );
 }
 
