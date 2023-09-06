@@ -27,7 +27,7 @@ COPY --from=builder /usr/src/app/build ./
 
 # Replace default config with new one
 RUN rm /etc/nginx/conf.d/default.conf
-COPY nginx.conf /etc/nginx/conf.d
+COPY nginx/nginx.conf /etc/nginx/conf.d
 
 
 # Run nginx as non root user
